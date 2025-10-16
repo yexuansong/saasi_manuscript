@@ -1,6 +1,6 @@
-### Scripts that generate the results in SAASI
+# Scripts that generate the results in SAASI
 
-# Required packages/software:
+## Required packages/software:
 
 SAASI(R)
 
@@ -14,5 +14,5 @@ TREETIME(PYTHON)
 
 PASTML(PYTHON)
 
-# Content
+## Content
 
