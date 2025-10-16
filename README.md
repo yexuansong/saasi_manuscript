@@ -3,8 +3,11 @@
 # Required packages/software:
 
 SAASI(R)
+
 APE(R)
+
 PHYTOOL(R)
+
 DIVERSITREE(R)
 TREETIME(PYTHON)
 PASTML(PYTHON)
