@@ -43,8 +43,8 @@ get_trans_hist <- function(true_tree_info,meta_data){
   
 }
 
-get_diff_hist <- function(tree1,tree2){
-  return(abs(get_trans_hist(tree1) - get_trans_hist(tree2)))
+get_diff_hist <- function(tree1,meta_data1,tree2,meta_data2){
+  return(abs(get_trans_hist(tree1,meta_data1) - get_trans_hist(tree2,meta_data2)))
 }
 
 
