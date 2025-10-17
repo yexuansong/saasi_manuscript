@@ -1,4 +1,6 @@
-get_trans_hist <- function(true_tree_info){
+setwd("/Users/yexuan-magpie/Desktop/pastml_treetime/")
+
+get_trans_hist <- function(true_tree_info,meta_data){
   n_tips <- length(true_tree_info$tip.label)
   n_nodes <- true_tree_info$Nnode
   n_total <- n_tips + n_nodes
@@ -7,14 +9,14 @@ get_trans_hist <- function(true_tree_info){
   
   for (i in 1:n_tips) {
     tip_name <- true_tree_info$tip.label[i]
-    states[i] <- true_info$State[true_info$label == tip_name]
+    states[i] <- meta_data$State[meta_data$label == tip_name]
   }
   
   for (i in 1:n_nodes) {
     node_num <- n_tips + i
     if (!is.null(true_tree_info$node.label) && length(true_tree_info$node.label) >= i) {
       node_name <- true_tree_info$node.label[i]
-      states[node_num] <- true_info$State[true_info$label == node_name]
+      states[node_num] <- meta_data$State[meta_data$label == node_name]
     }
   }
   
