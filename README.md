@@ -28,3 +28,12 @@ The second argument is the maximum running time.
 The third argument is the maximum number of tips in the present day.
 The forth argument is the folder's name
 
+
+## Methods used
+
+ace
+simmap
+pastml
+treetime
+saasi with default parameters
+saasi with estimated parameters
