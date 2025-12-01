@@ -1,27 +1,18 @@
-library("tidyr")
-library("stringr")
-require("treeio")
-library("tidyverse")
-library("ggalluvial")
-library("ggpubr")
-library("irr")
-library("stats4")
-library("ape")
-library("deSolve")
-library("strap")
-library("ips")
-library("ggplot2")
-require("ggtree")
-library("reshape2")
-library("ggstance")
-library("diversitree")
-library("ggimage")
-library("patchwork")
-library("janitor")
-library("phytools")
-library("dplyr")
-library("rstatix")
-library("jsonlite")
-library("rootSolve")
+required_packages <- c(
+  "tidyr", "stringr", "treeio", "tidyverse", "ggalluvial",
+  "ggpubr", "irr", "stats4", "ape", "deSolve", "strap", "ips",
+  "ggplot2", "ggtree", "reshape2", "ggstance", "diversitree",
+  "ggimage", "patchwork", "janitor", "phytools", "dplyr",
+  "rstatix", "jsonlite", "rootSolve"
+)
 
+missing_packages <- required_packages[!required_packages %in% installed.packages()[,"Package"]]
 
+if (length(missing_packages) > 0) {
+  warning(paste0(
+    "Missing packages: ", paste(missing_packages, collapse = ", ")
+  ))
+} else {
+  invisible(lapply(required_packages, library, character.only = TRUE))
+  cat("Load all required packages\n")
+}
