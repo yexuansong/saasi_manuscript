@@ -1,5 +1,6 @@
 # uncomment this to run the full analysis, otherwise use rds file
 # source("Code/Simulation/R/simulation.R")
+# source(file.path("Code/library.R"))
 
 # replace_matrix_with_vector <- function(matrix, vector) {
 #   for (i in 1:nrow(matrix)) {

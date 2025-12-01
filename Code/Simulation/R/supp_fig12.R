@@ -1,10 +1,8 @@
 # uncomment this to run the full analysis, otherwise use rds file
 # 
 # source("Code/Simulation/R/simulation.R")
-# 
-# library(microbenchmark)
-# library(ggplot2)
-# library(dplyr)
+# source(file.path("Code/library.R"))
+
 # 
 # # Function to generate parameters based on k
 # generate_pars <- function(k) {

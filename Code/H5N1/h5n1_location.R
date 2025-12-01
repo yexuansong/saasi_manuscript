@@ -1,32 +1,7 @@
-# Generate Figure 5
-
-# library("ape")
-# library("deSolve")
-# library("strap")
-# library("stringr")
-# library("ips")
-# require("treeio")
-# library("ggplot2")
-# require("ggtree")
-# library("reshape2")
-# library("ggstance")
-# library("diversitree")
-# library("ggimage")
-# library("ggpubr")
-# library("dplyr")
-# library("patchwork")
-# library("tidyverse")
-# library("janitor")
-# library("stringr")
-# library("skimr")
-# library("phytools")
-# library(dplyr)
-# library(rstatix)
-# library(jsonlite)
-
 source(file.path("SAASI/ode_solve.R"))
 source(file.path("SAASI/saasi.R"))
 source(file.path("Code/H5N1/h5n1_phy_data_cleaning.R"))
+source(file.path("Code/library.R"))
 
 ####################
 # unmodified phylogeny

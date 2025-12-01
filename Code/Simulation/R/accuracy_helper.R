@@ -1,4 +1,4 @@
-library(irr)
+source(file.path("Code/library.R"))
 
 ######################
 # This function returns 4 accuracy measurements 

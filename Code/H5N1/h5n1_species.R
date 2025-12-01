@@ -1,38 +1,7 @@
-##### Comparing results from ape/BiSSE/our implementations
-
-# load a bunch of packages that might come in handy 
-# library("ape")
-# library("deSolve")
-# library("strap")
-# library("stringr")
-# library("ips")
-# require("treeio")
-# library("ggplot2")
-# require("ggtree")
-# library("reshape2")
-# library("ggstance")
-# library("diversitree")
-# library("ggimage")
-# library("ggpubr")
-# library("dplyr")
-# library("patchwork")
-# library("tidyverse")
-# library("janitor")
-# library("stringr")
-# library("skimr")
-# library("phytools")
-# library(dplyr)
-# library(rstatix)
-# library(jsonlite)
-# library(ggalluvial)
-# library(rsvg)
-# library(rphylopic)
-# library(cowplot)
-
 source(file.path("SAASI/ode_solve.R"))
 source(file.path("SAASI/saasi.R"))
 source(file.path("Code/H5N1/h5n1_phy_data_cleaning(delete_wd).R"))
-
+source(file.path("Code/library.R"))
 
 ####################
 # unmodified phylogeny

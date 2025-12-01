@@ -1,3 +1,5 @@
+source(file.path("Code/library.R"))
+
 replace_matrix_with_vector <- function(matrix, vector) {
   for (i in 1:nrow(matrix)) {
     for (j in 1:ncol(matrix)) {
@@ -237,6 +239,5 @@ p <- ggplot(acc_data, aes(x = Metric, y = Accuracy)) +
 
 p
 
-#ggsave(file="figs3_updated.pdf", width = 210, height = 297, units = "mm")
 
 

@@ -1,5 +1,5 @@
 # An implementation from Stadler et al 2012 & Stadler 2010
-library(stats4)
+source(file.path("Code/library.R"))
 # inputs: node time (yi) and tip time (xi), maybe psi
 # outputs: ML estimates for speciation and extinction rate
 

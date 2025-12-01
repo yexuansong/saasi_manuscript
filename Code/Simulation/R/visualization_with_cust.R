@@ -1,11 +1,6 @@
 # uncomment this to run the full analysis, otherwise use rds file
 # 
-# library(ape)
-# library(ggplot2)
-# library(dplyr)
-# library(tidyr)
-# library(ggpubr)
-# 
+# source(file.path("Code/library.R"))
 # source("Code/Simulation/R/lost_info.R")
 # 
 # # NOTE: THIS SHOULD BE YOUR FILE DIR ONCE YOU RUN THE SHELL SCRIPT. THIS 

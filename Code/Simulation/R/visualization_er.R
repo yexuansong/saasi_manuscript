@@ -1,14 +1,9 @@
 # uncomment this to run the full analysis, otherwise use rds file
-# 
-# library(ape)
-# library(ggplot2)
-# library(dplyr)
-# library(tidyr)
-# library(ggpubr)
-# library(rstatix)
+
 # 
 # source("Code/Simulation/R/lost_info.R")
-# 
+# source(file.path("Code/library.R"))
+
 # # NOTE: THIS SHOULD BE YOUR FILE DIR ONCE YOU RUN THE SHELL SCRIPT. THIS 
 # # CODE SUPPLMENTARY FIGURE 9 & 10.
 # base_dir <- "final_equal_sampling/"  

@@ -1,5 +1,4 @@
-library(microbenchmark)
-library(patchwork)
+source(file.path("Code/library.R"))
 
 pars <- c(10,  10,
           .45, .45,

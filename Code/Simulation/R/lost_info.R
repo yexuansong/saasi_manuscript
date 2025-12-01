@@ -1,4 +1,4 @@
-setwd("/Users/yexuan-magpie/Desktop/pastml_treetime/")
+source(file.path("Code/library.R"))
 
 get_trans_hist <- function(true_tree_info,meta_data){
   n_tips <- length(true_tree_info$tip.label)

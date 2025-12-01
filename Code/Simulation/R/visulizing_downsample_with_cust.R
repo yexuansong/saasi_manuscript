@@ -1,11 +1,9 @@
 # uncomment this to run the full analysis, otherwise use rds file
 
-# library(ape)
-# library(ggplot2)
-# library(dplyr)
-# 
+
 # source("Code/Simulation/R/lost_info.R")
-# 
+# source(file.path("Code/library.R"))
+
 # # NOTE: THIS SHOULD BE YOUR FILE DIR ONCE YOU RUN THE SHELL SCRIPT. THIS 
 # # CODE GENERATES SUPPLMENTARY FIGURES 7 & 8.
 # # Define your base directories

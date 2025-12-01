@@ -1,8 +1,4 @@
-library(tidyr)
-library(stringr)
-require("treeio")
-
-setwd("/Users/yexuan-magpie/Desktop/SAASI_NC_codes/")
+source(file.path("Code/library.R"))
 
 options(warn=-1)
 

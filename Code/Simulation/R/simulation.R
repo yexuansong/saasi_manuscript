@@ -1,3 +1,5 @@
+source(file.path("Code/library.R"))
+
 make.tree.bisse_test <- function(pars, max.taxa=Inf, max.t=Inf, x0,
                                  single.lineage=TRUE) {
   
