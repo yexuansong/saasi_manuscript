@@ -35,7 +35,18 @@ jsonlite
 rootSolve
 
 ## Content
+### Code:
+Code for generating the figures in the manuscript.
 
+### Data:
+H5N1 tree used in the analysis. See original paper (Nguyen et al. 2025, DOI: 10.1126/science.adq0900
+) and GitHub: https://github.com/flu-crew/dairy-cattle-hpai-2024/tree/main/treetime.
+
+### Figures:
+Figures in the manuscript.
+
+### SAASI:
+The algorithm that is described in the manuscript.
 
 ## Running 
 
