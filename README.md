@@ -48,7 +48,7 @@ Figures in the manuscript.
 ### SAASI:
 The algorithm that is described in the manuscript.
 
-## Running 
+## Running Shell script
 
 To run the shell script, run:
 ```
