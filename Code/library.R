@@ -3,7 +3,7 @@ required_packages <- c(
   "ggpubr", "irr", "stats4", "ape", "deSolve", "strap",
   "ggplot2", "ggtree", "reshape2", "ggstance", "diversitree",
   "ggimage", "patchwork", "janitor", "phytools", "dplyr",
-  "rstatix", "jsonlite", "rootSolve"
+  "rstatix", "jsonlite", "rootSolve","microbenchmark"
 )
 
 missing_packages <- required_packages[!required_packages %in% installed.packages()[,"Package"]]
