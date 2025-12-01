@@ -4,8 +4,9 @@
 R (Version 4.4.1)
 Python (Version 3.13.7)
 
-TreeTime(Python)
-PastML(Python)
+TreeTime(Python): https://treetime.readthedocs.io/en/latest/
+
+PastML(Python): https://pastml.pasteur.fr/
 
 ## R library used
 tidyr
