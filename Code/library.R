@@ -14,5 +14,4 @@ if (length(missing_packages) > 0) {
   ))
 } else {
   invisible(lapply(required_packages, library, character.only = TRUE))
-  cat("Load all required packages\n")
 }
