@@ -1,7 +1,10 @@
 # uncomment this to run the full analysis, otherwise use rds file
 # 
-# source("Code/Simulation/R/simulation.R")
 # source(file.path("Code/library.R"))
+# source(file.path("Code/Simulation/R/accuracy_helper.R"))
+# source(file.path("SAASI/ode_solve.R"))
+# source(file.path("SAASI/saasi.R"))
+# source(file.path("Code/Simulation/R/simulation.R"))
 
 # 
 # # Function to generate parameters based on k
@@ -105,6 +108,7 @@
 # write.csv(timing_results, "saasi_timing_results.csv", row.names = FALSE)
 
 # RDS
+source(file.path("Code/library.R"))
 d <- readRDS("Code/Results/suppfig12.rds")
 
 p <- ggplot(d, aes(x = k, y = median_time)) +

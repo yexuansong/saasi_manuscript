@@ -1,7 +1,7 @@
+source(file.path("Code/library.R"))
 source(file.path("SAASI/ode_solve.R"))
 source(file.path("SAASI/saasi.R"))
 source(file.path("Code/H5N1/h5n1_phy_data_cleaning.R"))
-source(file.path("Code/library.R"))
 
 ####################
 # unmodified phylogeny

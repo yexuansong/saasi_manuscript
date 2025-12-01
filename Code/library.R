@@ -1,6 +1,6 @@
 required_packages <- c(
   "tidyr", "stringr", "treeio", "tidyverse", "ggalluvial",
-  "ggpubr", "irr", "stats4", "ape", "deSolve", "strap", "ips",
+  "ggpubr", "irr", "stats4", "ape", "deSolve", "strap",
   "ggplot2", "ggtree", "reshape2", "ggstance", "diversitree",
   "ggimage", "patchwork", "janitor", "phytools", "dplyr",
   "rstatix", "jsonlite", "rootSolve"

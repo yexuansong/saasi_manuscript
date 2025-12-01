@@ -1,8 +1,8 @@
+source(file.path("Code/library.R"))
 source("Code/Simulation/R/simulation.R")
 source(file.path("SAASI/ode_solve.R"))
 source(file.path("SAASI/saasi.R"))
 source(file.path("Code/Simulation/R/accuracy_helper.R"))
-source(file.path("Code/library.R"))
 
 ##################################### Parameter specification
 pars <- c(1,  1,      

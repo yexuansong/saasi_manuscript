@@ -1,4 +1,10 @@
 source(file.path("Code/library.R"))
+source(file.path("Code/Simulation/R/accuracy_helper.R"))
+source(file.path("SAASI/ode_solve.R"))
+source(file.path("SAASI/saasi.R"))
+source(file.path("Code/Simulation/R/simulation.R"))
+
+
 
 replace_matrix_with_vector <- function(matrix, vector) {
   for (i in 1:nrow(matrix)) {
@@ -18,7 +24,6 @@ tree_simulation_w_error <- function(pars,q_matrix){
     phy <- tree.sim(pars, x0=1, include.extinct=FALSE, 1000, 1000)
   }
   phy <- prune(phy)
-  print('make the tree')
   h2 <- history.from.sim.discrete(phy, 1:2)
   
   node_depths <- node.depth.edgelength(phy)
@@ -44,27 +49,19 @@ tree_simulation_w_error <- function(pars,q_matrix){
   #####################
   phy <- as.phylo(phy)
   phy$node.label <- NULL
-  # Extract tip states
-  #tip_states <- phy$tip.state
-  # Perform ASR
   asr_ace <- ace(tip_states, phy, type="discrete", model="ER")
   asr_rates <- asr_ace$rates
   
   qij_matrix <- replace_matrix_with_vector(asr_ace$index.matrix,asr_ace$rates)
   
-  print('finish ace')
-
   #####################
   # perform saasi
   #####################
   asr_our <- saasi(pars,phy,q_matrix)
-  #print(asr_our)
-  print('finish our correct')
   qij_matrix <- replace_matrix_with_vector(asr_ace$index.matrix,asr_ace$rates)
   
   asr_our_est <- saasi(pars,phy,qij_matrix)
-  #print(asr_our_est)
-  
+
   qij_matrix2 <- replace_matrix_with_vector(asr_ace$index.matrix,asr_ace$rates)
   qij_matrix2[,1] = qij_matrix2[,1]*2
   qij_matrix2[1,] = qij_matrix2[1,]/2
@@ -90,16 +87,12 @@ tree_simulation_w_error <- function(pars,q_matrix){
 
   asr_our_est_5 <- saasi(pars,phy,qij_matrix5)
 
-  print('finish our estimate')
-  
+
   #####################
   # perform accuracy check
   #####################  
   
   acc_asr <- accuracy_helper(asr_ace$lik.anc,true_phy_info_new$State,tip_states)
-  #print("1")
-  #acc_sim <- accuracy_helper(head(simmap_lik,n=length(h2$node.state)- length(tips_to_drop)),true_phy_info_new$State,tip_states)
-  #print("2")
   acc_our <- accuracy_helper(asr_our[,1:2],true_phy_info_new$State,tip_states)
   acc_our_est <- accuracy_helper(asr_our_est[,1:2],true_phy_info_new$State,tip_states)
   acc_our_est2 <- accuracy_helper(asr_our_est_2[,1:2],true_phy_info_new$State,tip_states)
@@ -108,7 +101,6 @@ tree_simulation_w_error <- function(pars,q_matrix){
   acc_our_est5 <- accuracy_helper(asr_our_est_5[,1:2],true_phy_info_new$State,tip_states)
   
   #return the accuracies
-  print("?")
   return(list(
     asr=acc_asr,
     our=acc_our,
@@ -132,7 +124,6 @@ qij_matrix <- function(k,val) {
   return(mat)
 }
 q_matrix = qij_matrix(2,0.05)
-# generate 10 trees
 results1 <- list()
 for (i in 1:100){
   print(i)

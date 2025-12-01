@@ -1,6 +1,10 @@
 # uncomment this to run the full analysis, otherwise use rds file
 # 
 # source(file.path("Code/library.R"))
+# source(file.path("Code/Simulation/R/accuracy_helper.R"))
+# source(file.path("SAASI/ode_solve.R"))
+# source(file.path("SAASI/saasi.R"))
+# source(file.path("Code/Simulation/R/simulation.R"))
 # source("Code/Simulation/R/lost_info.R")
 # 
 # # NOTE: THIS SHOULD BE YOUR FILE DIR ONCE YOU RUN THE SHELL SCRIPT. THIS 
@@ -212,6 +216,8 @@
 
 
 # RDS
+source(file.path("Code/library.R"))
+
 d <- readRDS("Code/Results/1000_sims_onetenth.rds")
 
 p1 <- ggplot(d, aes(x = method, y = accuracy)) +
