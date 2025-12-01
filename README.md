@@ -1,18 +1,11 @@
 # Scripts that generate the results in SAASI
 
 ## Required packages/software:
+R (Version 4.4.1)
+Python (Version 3.13.7)
 
-SAASI(R)
-
-APE(R)
-
-PHYTOOL(R)
-
-DIVERSITREE(R)
-
-TREETIME(PYTHON)
-
-PASTML(PYTHON)
+TREETIME(Python)
+PASTML(Python)
 
 ## Content
 
@@ -37,3 +30,31 @@ pastml
 treetime
 saasi with default parameters
 saasi with estimated parameters
+
+
+## R library used
+tidyr
+stringr
+treeio
+tidyverse
+ggalluvial
+ggpubr
+irr
+stats4
+ape
+deSolve
+strap
+ips
+ggplot2
+ggtree
+reshape2
+ggstance
+diversitree
+ggimage
+patchwork
+janitor
+phytools
+dplyr
+rstatix
+jsonlite
+rootSolve
