@@ -74,11 +74,11 @@ p1 <- inset(p1, ace_pie,width = 0.05,height = 0.05)
 p1
 
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  # Run multiple times for accuracy
 )
 
-asr_our <- our_phisse_back_forward_ailene(pars,phy,q_matrix)
+asr_our <- saasi(pars,phy,q_matrix)
 asr_our$node <- 1:ace_phy$Nnode + Ntip(ace_phy)
 our_pie <- nodepie(asr_our,cols=1:k)
 
@@ -133,7 +133,7 @@ phy$Nnode
 
 
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  # Run multiple times for accuracy
 )
 
@@ -179,7 +179,7 @@ phy$Nnode
 
 
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  # Run multiple times for accuracy
 )
 
@@ -225,7 +225,7 @@ phy$Nnode
 
 
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  
 )
 
@@ -272,7 +272,7 @@ phy$Nnode
 
 
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  
 )
 
@@ -318,7 +318,7 @@ phy <- new_phy
 
 # running time tree ~ 100,000 tips
 microbenchmark(
-  our_phisse_back_forward_ailene(pars, phy, q_matrix),
+  saasi(pars, phy, q_matrix),
   times = 10  
 )
 
