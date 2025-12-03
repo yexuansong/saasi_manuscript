@@ -69,7 +69,7 @@ ace_species <- ace_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("a") +labs(color = "Species")+
+  theme_tree2()+ggtitle("a") +labs(color = "Host")+
   theme(text = element_text(size = 15,family = "serif",hjust = 1),plot.title = element_text(size=15),
         axis.text.x = element_text(angle = 60),legend.title = element_text(size = 15, face = "bold"))
 
@@ -127,7 +127,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("a") +labs(color = "Species")+
+  theme_tree2()+ggtitle("a") +labs(color = "Host")+
   theme(text = element_text(size = 15,family = "serif",hjust = 1),plot.title = element_text(size=15),
         axis.text.x = element_text(angle = 60),legend.title = element_text(size = 15, face = "bold"))
 our_species
@@ -173,7 +173,7 @@ alluvial_our2 <- ggplot(alluvial_long,
   geom_alluvium() +
   geom_stratum() +
   theme_minimal() +
-  labs(x = "", y = "", fill = "Species") +
+  labs(x = "", y = "", fill = "Host") +
   ggtitle("d") +
   scale_fill_discrete(labels = c("cattle", "mammal", "poultry", "wild bird")) +
   scale_x_discrete(labels = c("Ancestor", "Descendent")) +
@@ -222,7 +222,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("b") +labs(color = "Species")+
+  theme_tree2()+ggtitle("a") +labs(color = "Host")+
   theme(text = element_text(size = 15,family = "serif",hjust = 1),plot.title = element_text(size=15),
         axis.text.x = element_text(angle = 60),legend.title = element_text(size = 15, face = "bold"))
 our_species
@@ -315,7 +315,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("b") +labs(color = "Species")+
+  theme_tree2()+ggtitle("b") +labs(color = "Host")+
   geom_vline(xintercept = 2024.035, color = "red", linetype = "dashed", size = 0.5)+
   geom_vline(xintercept = 2024.075, color = "red", linetype = "dashed", size = 0.5)+
   geom_hilight(node=120, fill="purple",alpha=0.05) +
@@ -406,7 +406,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("b") +labs(color = "Species")+
+  theme_tree2()+ggtitle("b") +labs(color = "Host")+
   geom_vline(xintercept = 2024.035, color = "red", linetype = "dashed", size = 0.5)+
   geom_vline(xintercept = 2024.075, color = "red", linetype = "dashed", size = 0.5)+
   geom_hilight(node=120, fill="purple",alpha=0.05) +
@@ -501,7 +501,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("c") +labs(color = "Species")+
+  theme_tree2()+ggtitle("c") +labs(color = "Host")+
   geom_vline(xintercept = 2024.105, color = "red", linetype = "dashed", size = 0.5)+
   geom_vline(xintercept = 2024.145, color = "red", linetype = "dashed", size = 0.5)+
   geom_hilight(node=120, fill="purple",alpha=0.05) +
@@ -592,9 +592,7 @@ our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),siz
     labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
                "02/2024","04/2024"),
   )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
-  theme_tree2()+ggtitle("c") +labs(color = "Species")+
-  #geom_hilight(node=120, fill="purple",alpha=0.05) +
-  # geom_text2(aes(subset = (node == 127), label = "Key"), hjust = 1.5)+
+  theme_tree2()+ggtitle("c") +labs(color = "Host")+
   geom_vline(xintercept = 2024.105, color = "red", linetype = "dashed", size = 0.5)+
   geom_vline(xintercept = 2024.145, color = "red", linetype = "dashed", size = 0.5)+
   geom_hilight(node=120, fill="purple",alpha=0.05) +
@@ -654,6 +652,58 @@ alluvial_our7 <- ggplot(alluvial_long,
   theme(text = element_text(size = 15, family = "serif",), plot.title = element_text(size= 15),
         legend.position = "none")
 
+
+
+
+
+# Equal sampling, equal transition, changing title
+our_phy <- multi2di(tree_modified)
+lab <- simmap_phy$tip.label
+numeric_vector <- as.numeric(factor(lab))
+names(numeric_vector) <- lab
+
+our_phy$tip.state <- numeric_vector
+
+phy <- our_phy
+
+
+qij_rate <- 2
+qij_matrix <- replace_matrix_with_vector(ans_ace$index.matrix,qij_rate)
+
+pars <- c(21.1,21.1,21.1,21.1,
+          6.7,6.7,6.7,6.7,
+          10,10,10,10,
+          .1,.1,.1,
+          .1,.1,.1,
+          .1,.1,.1,
+          .1,.1,.1)
+qij_matrix2 <- replace_matrix_with_vector(ans_ace$index.matrix,ans_ace$rates)
+
+mm<-qij_matrix
+asr_our <- saasi(pars,our_phy,mm)
+colnames(asr_our) = c(1,2,3,4)
+
+asr_our$node <- 1:ace_phy$Nnode + Ntip(ace_phy)
+our_pie3 <- nodepie(asr_our,cols=1:4)
+
+our_species <- ggtree(ace_phy,options(ignore.negative.edge=TRUE),mrsd = "2024-04-01")
+our_species <- our_species %<+% tree_info + geom_tippoint(aes(color=species),size=0.9)+
+  scale_x_continuous(
+    breaks = c(2023.48,  2023.61,  2023.74, 2023.87,
+               2024.0,  2024.13,  2024.26), 
+    labels = c("04/2023","06/2023","08/2023","10/2023","12/2023",
+               "02/2024","04/2024"),
+  )+scale_color_discrete(labels = c("wild-bird" = "wild bird"))+
+  theme_tree2()+ggtitle("b") +labs(color = "Host")+
+  theme(text = element_text(size = 15,family = "serif",hjust = 1),plot.title = element_text(size=15),
+        axis.text.x = element_text(angle = 60),legend.title = element_text(size = 15, face = "bold"))
+our_species
+p11 <- inset(our_species, our_pie3,width = 0.035,height = 0.035,hjust=0.005)
+p11
+
+
+
+
 #####################
 # combine plots
 # Figure 4, Suppplmentary Figures 4,5
@@ -663,7 +713,7 @@ p8
 p9 <- ggarrange(p2,p4,p6,alluvial_our2,alluvial_our4,alluvial_our6,nrow=2,ncol=3,heights = c(1.75,1),common.legend = TRUE,legend = "bottom")
 p9
 
-p10 <- ggarrange(p1,p3,ncol=2,heights = c(1.75,1),common.legend = TRUE,legend = "bottom")
+p10 <- ggarrange(p1,p11,ncol=2,heights = c(1.75,1),common.legend = TRUE,legend = "bottom")
 p10
 
 
