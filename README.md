@@ -1,4 +1,4 @@
-# Scripts that generate the results in SAASI
+# Scripts that generate the results in SAASI manuscript
 
 ## Required packages/software:
 R (Version 4.4.1)
@@ -7,6 +7,8 @@ Python (Version 3.13.7)
 TreeTime(Python): https://treetime.readthedocs.io/en/latest/
 
 PastML(Python): https://pastml.pasteur.fr/
+
+Typical install time: less than 1min.
 
 ## R library used
 tidyr
@@ -50,7 +52,7 @@ Codes that conduct simulation studies.
 
 ### Data:
 H5N1 tree used in the analysis. See original paper (Nguyen et al. 2025, DOI: 10.1126/science.adq0900
-) and GitHub: https://github.com/flu-crew/dairy-cattle-hpai-2024/tree/main/treetime.
+) and GitHub: https://github.com/flu-crew/dairy-cattle-hpai-2024/tree/main.
 
 ### Figures:
 Figures in the manuscript.
@@ -71,5 +73,7 @@ The first argument is the number of simulations.
 The second argument is the maximum running time.
 The third argument is the maximum number of tips in the present day.
 The fourth argument is the name of the output folder.
+
+The expected output is 1,000 folders, each folder contains all the Ancerstral State Inference methods (ace,simmap,PastML,TreeTime,SAASI) results, running times, and the true simualted phylogeny. The expect running time for one simulation (one folder) is expected to be between 1min and 5min.
 
 
